@@ -1,0 +1,17 @@
+server:
+  port: 19991
+
+schemaCompatibilityVersion: ${SCHEMA_COMPATIBILTY_VERSION:V1}
+
+spring:
+  application:
+    name: MongoDbSchemaMigration-${SCHEMA_COMPATIBILTY_VERSION:V1}
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: schema-migration
+      auto-index-creation: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
